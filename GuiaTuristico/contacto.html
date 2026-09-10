@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Página de contacto — Lisboa Guia Turístico. Envie-nos uma mensagem ou sugestão.">
+    <meta name="keywords" content="contacto, Lisboa, Portugal, turismo, formulário">
+    <meta name="author" content="Sandra Silva">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+    <meta property="og:title" content="Contacto — Lisboa Guia Turístico">
+    <meta property="og:description" content="Entre em contacto connosco sobre Lisboa.">
+    <meta property="og:url" content="https://sandra-silva.pt/contacto.html">
+
+    <title>Contacto — Lisboa Guia Turístico</title>
+    <link rel="stylesheet" href="trabalho.css">
+</head>
+
+<body>
+<header class="site-header" id="inicio">
+    <div class="header-brand">
+        <div class="logo">
+            <span class="logo-icon">🏛️</span>
+            <span class="logo-text">Lisboa</span>
+        </div>
+        <p class="slogan">A cidade das sete colinas — descubra Portugal</p>
+    </div>
+
+    <div class="line"></div>
+
+    <nav class="main-nav">
+        <a href="trabalho.html#inicio">Início</a>
+        <a href="trabalho.html#historia">História</a>
+        <a href="trabalho.html#locais_turisticos">Turismo</a>
+        <a href="trabalho.html#curiosidades">Curiosidades</a>
+        <a href="trabalho.html#cultura">Cultura</a>
+        <a href="trabalho.html#gastronomia">Gastronomia</a>
+        <a href="trabalho.html#conclusao">Descubra Lisboa</a>
+        <a href="trabalho.html#multimedia">Multimédia</a>
+        <a href="trabalho.html#mapa">Mapa</a>
+        <a href="trabalho.html#galeria">Galeria</a>
+        <a href="contacto.html" class="nav-active">Contacto</a>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero hero-pequeno">
+    <img src="contacto.png" alt="Ícone de contacto" class="img-contacto">
+    <h1>Contacto</h1>
+    <p class="especial">Fale connosco sobre Lisboa</p>
+</section>
+
+<section id="contacto">
+
+    <div class="contacto-container">
+        <div class="texto">
+            <h2>Informações de Contacto</h2>
+            <p>Para mais informações sobre Lisboa, entre em contacto:</p>
+            <ul>
+                <li>Email: <a href="mailto:sandra.silva.35857@formandos.cinel.pt">sandra.silva.35857@formandos.cinel.pt</a></li>
+                <li>Telefone: +351 914 000 000</li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- FORMULÁRIO DE CONTACTO -->   
+    <form class="formulario"
+      onsubmit="alert('Mensagem enviada com sucesso!')">
+
+        <h2>Formulário de Contacto</h2>
+
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" maxlength="50" placeholder="O seu nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+
+        <label for="comentarios">Comentários:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"
+                  placeholder="Escreva aqui a sua mensagem ou sugestão..." required></textarea>
+
+        <label for="foto">Fotografia:</label>
+        <input type="file" id="foto" name="foto" accept="image/*">
+
+        <details class="campos-extra">
+            <summary>Informações adicionais (opcional)</summary>
+
+            <label for="numero">Número (100–200):</label>
+            <input type="number" id="numero" name="numero" min="100" max="200">
+
+            <label for="data">Data de nascimento:</label>
+            <input type="date" id="data" name="data" max="2019-12-31">
+
+            <label for="morada">Morada:</label>
+            <textarea id="morada" name="morada" rows="3"></textarea>
+
+            <label for="estado">Estado Civil:</label>
+            <select id="estado" name="estado">
+                <option value="">Selecione</option>
+                <option value="solteiro">Solteiro(a)</option>
+                <option value="casado">Casado(a)</option>
+                <option value="divorciado">Divorciado(a)</option>
+                <option value="viuvo">Viúvo(a)</option>
+            </select>
+
+            <label>Género:</label>
+            <div class="radio-group">
+                <input type="radio" id="masculino" name="genero" value="masculino">
+                <label for="masculino">Masculino</label>
+
+                <input type="radio" id="feminino" name="genero" value="feminino">
+                <label for="feminino">Feminino</label>
+
+                <input type="radio" id="outro" name="genero" value="outro">
+                <label for="outro">Outro</label>
+            </div>
+        </details>
+        
+        <button type="submit">Enviar</button>
+    </form>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <span class="footer-logo">🏛️ Lisboa</span>
+        <p>® Esta página pertence a Sandra Silva</p>
+        <p>Formação HTML e CSS — <a href="mailto:sandra@formandos.cinel.pt">sandra@formandos.cinel.pt</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

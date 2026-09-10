@@ -1,0 +1,663 @@
+/* =============================================================
+DESIGN 
+ ============================================================= */
+
+:root {
+    --verde-escuro:   #155d27;
+    --verde-medio:    #1e7e3a;
+    --verde-claro:    #3db564;
+    --verde-suave:    #d6f0dd;
+    --verde-bg:       #f4f8f4;
+    --branco:         #ffffff;
+    --cinza-claro:    #f7f8f7;
+    --cinza-borda:    #e2ebe2;
+    --texto:          #2c2c2c;
+    --texto-sec:      #555555;
+    --sombra:         0 2px 14px rgba(0, 0, 0, 0.07);
+    --raio:           14px;
+    --padding-sec:    36px 40px;
+}
+
+/* =============================================================
+BASE
+============================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--verde-bg);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* =============================================================
+HEADER
+============================================================= */
+ .site-header {
+    background: var(--verde-escuro);
+    color: white;
+    padding: 18px 30px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 16px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    align-content: center;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    justify-content: center; 
+
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon { font-size: 32px; }
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.slogan {
+    font-size: 14px;
+    font-style: italic;
+    color: #a8dcb8;
+    border-left: 3px solid var(--verde-claro);
+    padding-left: 12px;
+}
+
+.line {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 8px 0;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 8px 0;
+}
+
+.main-nav a {
+    color: #c0e8ca;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 11px;
+    border-radius: 6px;
+    transition: background 0.25s, color 0.25s;
+    white-space: nowrap;
+}
+
+.main-nav a:hover {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+}
+
+/* =============================================================
+MAIN 
+============================================================= */
+
+main {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 20px 50px;
+}
+
+/* =============================================================
+HERO
+============================================================= */
+
+.hero {
+    text-align: center;
+    padding: 64px 30px 44px;
+    background: linear-gradient(155deg, var(--verde-escuro) 0%, var(--verde-claro) 100%);
+    color: white;
+    border-radius: 0 0 22px 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    margin-bottom: 36px;
+}
+
+.hero-pequeno {
+    padding: 36px 30px 28px;
+}
+
+.hero-pequeno h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.nav-active {
+    background: rgba(255,255,255,0.22) !important;
+    color: #fff !important;
+}
+
+.hero h1 {
+    font-size: 54px;
+    color: #fff;
+    font-weight: 900;
+    letter-spacing: 4px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.25);
+    margin-bottom: 12px;
+    border: none;
+}
+
+.hero .especial {
+    color: #c8f0d4;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 18px;
+}
+
+.hero p:not(.especial) {
+    font-size: 16px;
+    color: rgba(255,255,255,0.9);
+    max-width: 660px;
+    margin: 0 auto 10px;
+    line-height: 1.8;
+}
+
+.image {
+    margin: 20px auto 24px;
+    max-width: 480px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+}
+
+.image img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-food {
+    margin: 20px auto 24px;
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.35);
+}
+
+.image-food img {
+    height: 350px;
+    width: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* =============================================================
+SECÇÕES - card base
+============================================================= */
+
+section {
+    background: var(--branco);
+    border-radius: var(--raio);
+    padding: var(--padding-sec);
+    box-shadow: var(--sombra);
+    border: 1px solid var(--cinza-borda);
+    margin: 28px 0;
+    scroll-margin-top: 160px;
+}
+
+section h1 {
+    font-size: 30px;
+    color: var(--verde-escuro);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--verde-claro);
+}
+
+section h2 {
+    font-size: 20px;
+    color: var(--verde-medio);
+    margin: 22px 0 10px;
+    font-weight: 700;
+}
+
+section p {
+    font-size: 16px;
+    color: var(--texto-sec);
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+li { padding: 5px 0; color: var(--texto-sec); }
+
+/* =============================================================
+HISTÓRIA
+============================================================= */
+
+.historia h1 { font-size: 34px; }
+.historia h2 { font-size: 24px; }
+.historia h3 { font-size: 18px; color: var(--verde-claro); }
+.historia p { text-align: justify; }
+
+table {
+    width: 400px;
+    border-collapse: collapse;
+    background: var(--branco);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid var(--cinza-borda);
+}
+
+caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--texto);
+}
+
+th, td {
+    border: 1px solid #d8e8d8;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+th {
+    background: var(--verde-escuro);
+    color: white;
+    font-size: 14px;
+}
+
+tr:nth-child(even) td { background: var(--cinza-claro); }
+
+/* =============================================================
+CURIOSIDADES
+============================================================= */
+.lista-curiosidades {
+    list-style-type: upper-alpha;
+    margin-left: 24px;
+    margin-bottom: 20px;
+}
+
+.texto-curiosidades {
+    font-size: 50px;
+    color: var(--verde-escuro);
+    text-align: center;
+    line-height: 1.3;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* =============================================================
+CULTURA
+ ============================================================= */
+ .texto-culturais {
+    font-size: 16px;
+    line-height: 1.8;
+    text-align: center;
+    margin-bottom: 18px;
+    color: var(--verde-escuro);
+}
+
+.romanos { list-style-type: upper-roman; margin-left: 28px; }
+
+
+/* =============================================================
+  GASTRONOMIA
+============================================================= */
+.lista-gastronomia dt {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--verde-escuro);
+    margin-top: 18px;
+}
+
+.lista-gastronomia dd {
+    margin-left: 0;
+    padding-left: 14px;
+    border-left: 4px solid var(--verde-claro);
+    color: var(--texto-sec);
+    margin-top: 4px;
+    line-height: 1.7;
+}
+
+
+/* =============================================================
+CONCLUSÃO
+============================================================= */
+
+.conclusao p {
+    background: var(--cinza-claro);
+    padding: 20px 24px;
+    border-left: 5px solid var(--verde-claro);
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--texto);
+    transition: background 0.3s;
+}
+
+.conclusao p:hover { background: var(--verde-suave); }
+
+.conclusao a {
+    text-decoration: none;
+    color: var(--verde-medio);
+    font-weight: bold;
+}
+
+.conclusao a:hover { text-decoration: underline; }
+
+.iframe {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.iframe iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 480px;
+    border: none;
+    border-radius: var(--raio);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* =============================================================
+MULTIMÉDIA 
+============================================================= */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    margin-bottom: 22px;
+    background: #111;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+}
+
+.video-pequeno {
+    max-width: 560px;
+    padding-top: 315px;
+}
+
+.video-pequeno iframe {
+    position: relative;
+    width: 100%;
+    height: 315px;
+    padding-top: 0;
+}
+
+.audio-container {
+    background: var(--cinza-claro);
+    border: 1px solid var(--cinza-borda);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin: 10px 0 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.audio-container audio { flex: 1; min-width: 200px; }
+
+.audio-legenda {
+    color: var(--texto-sec);
+    margin: 0;
+    text-align: center;
+}
+
+.audio-legenda a { color: var(--verde-medio); 
+text-decoration: none; }
+
+/* =============================================================
+ MAPA 
+ ============================================================= */
+.mapa-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    margin-top: 16px;
+    border: 1px solid var(--cinza-borda);
+}
+
+.mapa-container iframe {
+    width: 100%;
+    height: 440px;
+    border: none;
+    display: block;
+}
+
+/* =============================================================
+GALERIA
+============================================================= */
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.galeria-grid figure {
+    background: var(--branco);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.09);
+    border: 1px solid var(--cinza-borda);
+    transition: transform 0.25s, box-shadow 0.25s;
+    text-align: center;
+}
+
+.galeria-grid figure:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+}
+
+.galeria-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.galeria-grid a { text-decoration: none; }
+
+figcaption {
+    padding: 9px 10px;
+    font-size: 13px;
+    color: var(--texto-sec);
+    font-style: italic;
+    background: var(--cinza-claro);
+    border-top: 1px solid var(--cinza-borda);
+}
+
+/* =============================================================
+CONTACTO 
+============================================================= */
+.contacto-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.texto h2 {
+    font-size: 22px;
+    color: var(--verde-escuro);
+    margin-bottom: 10px;
+}
+
+.texto a { color: var(--verde-medio); }
+
+/* =============================================================
+FORMULÁRIO
+============================================================= */
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 32px;
+    background: var(--cinza-claro);
+    border-radius: var(--raio);
+    border: 1px solid var(--cinza-borda);
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.formulario h2 {
+    color: var(--verde-escuro);
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+.formulario label {
+    font-weight: bold;
+    color: var(--texto);
+    font-size: 14px;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    padding: 10px 13px;
+    border: 1px solid #c8d8c8;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    background: var(--branco);
+    color: var(--texto);
+    transition: border-color 0.25s, box-shadow 0.25s;
+    width: 100%;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    outline: none;
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 0 3px rgba(61,181,100,0.18);
+}
+
+.radio-group {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] { width: auto; }
+.radio-group label { font-weight: normal; }
+
+.formulario button {
+    padding: 13px;
+    background: var(--verde-escuro);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s, transform 0.2s;
+    margin-top: 4px;
+}
+
+.formulario button:hover {
+    background: var(--verde-claro);
+    transform: translateY(-2px);
+}
+
+.campos-extra {
+    border: 1px dashed #b0c8b0;
+    border-radius: 8px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: var(--branco);
+}
+
+.campos-extra summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--texto-sec);
+    font-size: 14px;
+}
+
+/* =============================================================
+RODAPÉ
+============================================================= */
+
+.footer {
+    background: var(--verde-escuro);
+    color: #aacca8;
+    padding: 28px 20px;
+    text-align: center;
+    margin-top: 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--verde-claro);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.footer p { font-size: 13px; }
+
+.footer a { color: var(--verde-claro); text-decoration: none; }
+.footer a:hover { text-decoration: underline; }
+
+@media (max-width: 768px) {
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        flex-direction: column;
+    }
+}
