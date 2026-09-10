@@ -45,9 +45,13 @@ Website turístico desenvolvido em HTML5 e CSS3 durante a formação em programa
 ## Estrutura do projeto
 
 ```text
-Guia-Lisboa/
-├── img/
-│
-├── contacto.html
-├── trabalho.html
-└── trabalho.css
+guia-turistico-lisboa-html-css/
+└── Guia Turístico/
+    ├── contacto.html
+    ├── contacto.png
+    ├── img1.jpg
+    ├── img2.jpg
+    ├── img3.jpg
+    ├── img4.png
+    ├── trabalho.css
+    └── trabalho.html
